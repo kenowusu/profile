@@ -8,7 +8,7 @@ export const ProjectsSection = ()=>{
 
    return(
     <>
-    <h1 className="mb-4">Projects</h1>
+    <h1 className="mb-4">Works</h1>
     <ProjectsContainer order="desc">
        <ProjectList/>
     </ProjectsContainer>

@@ -45,7 +45,7 @@ export const ProjectSection  = ()=>{
 
     return(
         <>
-            <h2 className="section-head">Projects</h2>
+            <h2 className="section-head">Works</h2>
             
             <div className='mb-6'>
                 <ProjectsContainer categories={19} order="asc">
@@ -56,7 +56,7 @@ export const ProjectSection  = ()=>{
 
            <Link href="/projects">
             <a className='btn btn__primary flex items-center'>
-                <span>More Projects</span>
+                <span>More Works</span>
                 <RightCaretContainer><RightCaretSvg/></RightCaretContainer>
             </a>
             </Link>
