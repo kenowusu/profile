@@ -22,7 +22,7 @@ export const Header = ()=>{
                 </Link>
 
                 <ul className="header-nav">
-                    <li className="header-nav-li"><Link href="/projects"><a className={pathname == "/projects" ? "active" : undefined}>Projects</a></Link></li>
+                    <li className="header-nav-li"><Link href="/projects"><a className={pathname == "/projects" ? "active" : undefined}>works</a></Link></li>
                     <li className="header-nav-li"><Link href="https://github.com/kenpl44"><a target="_blank">Github</a></Link></li>
                     <li className="header-nav-li"><button onClick={()=>setShouldShowModal(!shouldShowModal)}>Message</button></li>
                 </ul>
