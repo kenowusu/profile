@@ -3,7 +3,7 @@
 
 module.exports = {
   images:{
-    domains:['profile.kennethowusu.com']
+    domains:['profile.kowusu.me']
   },
   webpack(config) {
       config.module.rules.push({
