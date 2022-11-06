@@ -60,7 +60,7 @@ export const Profile = ()=>{
 
              <div className="profile-description">
                 <h1 className="profile-name">Hi, {"I'm"} Kenneth!</h1>
-                <h2 className="profile-title">Full Stack Web Developer</h2>
+                <h2 className="profile-title">Full-Stack Web Developer</h2>
                 <OptionContainer path="profile_summary">
                     <ProfileExcerpt/>
                 </OptionContainer>

@@ -7,9 +7,9 @@ import {v4 as uuid} from 'uuid';
 
 /*============components===================*/
 import { ProjectSinglePageSkeleton } from '../skeleton/ProjectSinglePageSkeleton';
-
 import RightCaretSvg from '../../public/icons/right-caret.svg';
 import LinkNewTabSvg from '../../public/icons/link_new_tab.svg';
+import Head from 'next/head';
 
 
 
@@ -18,21 +18,24 @@ export const ProjectFullDetail = ({project})=>{
 
 
 const {acf,content} = project || {};
-
 const {website,platform,stack,gallery} = acf || {};
+
 return(
    <ProjectSingleLayout>
     
 
      {!project && <ProjectSinglePageSkeleton/>}
-   
+     {project && 
+     <>
+     <Head>
+       <title>{acf && acf.project_name} - Kenneth Owusu</title>
+     </Head>
      <div className='projectBreadcrumb'>
           <span className='mr-2'><Link href='/projects'><a>Projects</a></Link></span>
           <span className='mr-2'><RightCaretSvg/></span>
           <span>{acf && acf.project_name}</span>
        
       </div>
-
 
       {content &&  (<div className="project-single-description" dangerouslySetInnerHTML={{__html:content.rendered}}>
       
@@ -70,6 +73,9 @@ return(
 
           } )}
       </div>
+
+      </>
+   }
     
    
  
