@@ -20,7 +20,7 @@ export const Project = ({project})=>{
               
                 <div className="proj-imgoverlay">
                     <div className="proj-img">
-                        <Image src={_embedded['wp:featuredmedia'] ? _embedded['wp:featuredmedia'][0].source_url : '/images/shot1.png'} width="231px" height="125px"/>
+                        <Image src={_embedded['wp:featuredmedia'] ? _embedded['wp:featuredmedia'][0].source_url : '/images/no-image.png'} width="231px" height="125px"/>
 
                         {/* proj-overlay */}
                         <div className="proj-overlay">
