@@ -5,7 +5,7 @@ export const GA = ()=>{
     return(
         <>
             <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-5Q14BVCS9F"/>
-            <Script>
+            <Script id="my-ga-script">
               {`
                           window.dataLayer = window.dataLayer || [];
                           function gtag(){dataLayer.push(arguments)}

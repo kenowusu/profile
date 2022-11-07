@@ -4,8 +4,15 @@ import Head from 'next/head';
 import { ProjectSinglePage } from "../../components/pages/ProjectSinglePage";
 
 
-
-const ProjectSingle = ({})=>{
+export const  getServerSideProps = async({query})=>{
+   
+    return{
+        props:{
+            slug:query['project-single']
+        }
+    }
+}
+const ProjectSingle = ({slug})=>{
     
 
 
@@ -14,7 +21,7 @@ const ProjectSingle = ({})=>{
         <Head>
             <title>Project - Kenneth Owusu</title>
         </Head>
-        <ProjectSinglePage/>
+        <ProjectSinglePage slug={slug}/>
         
         </>
     )

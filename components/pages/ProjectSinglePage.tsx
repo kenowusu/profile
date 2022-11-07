@@ -7,11 +7,11 @@ import { ProjectContainer } from '../containers/ProjectContainer';
 import { ProjectFullDetail } from '../projects/ProjectFullDetail';
 
 
-export const ProjectSinglePage = ()=>{
+export const ProjectSinglePage = ({slug})=>{
 
   
 return(
-  <ProjectContainer>
+  <ProjectContainer slug={slug}>
      <ProjectFullDetail/>
   </ProjectContainer>
 )

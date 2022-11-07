@@ -1,22 +1,21 @@
 import axios from 'axios';
 import React, { useEffect,useState } from 'react';
-import {useRouter} from 'next/router';
+import Error from 'next/error';
 
 
 
 
 
 import api from './api';
+import Router from 'next/router';
 
 
 
-export const ProjectContainer = ({children})=>{
-
-    const [project,setProject] = useState('');
+export const ProjectContainer = ({children,slug})=>{
     
-    /**********get project slug for api***/
-    const router = useRouter();
-    const slug = router.query['project-single'];
+ 
+    const [project,setProject] = useState('');
+    // const [pageNotFound,setPageNotFound] = useState(false);
 
     
 /***********useEffect*******/
@@ -40,7 +39,10 @@ useEffect(()=>{
             })
             setProject(response.data[0])
        
-            
+            if(response.data.length < 1){
+                Router.push('/404')
+               // setPageNotFound(true)
+            }
         }catch(e){console.log(e)}
     }
     
@@ -54,6 +56,8 @@ useEffect(()=>{
 /*******render************/
 return(
     <>
+
+     {/* {(pageNotFound) && <Error statusCode={404}/>} */}
      {React.Children.map(children,child=>{
         if(React.isValidElement(child)){
             return React.cloneElement(child,{project});
