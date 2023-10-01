@@ -12,6 +12,9 @@ const Home: NextPage = () => {
    <>
     <Head>
       <title>Kenneth Owusu - Homepage</title>
+      <meta name="keywords" content="Kenneth Owusu, Kenowusu"/>
+      <meta name="robots" content="index, follow"/>
+      <meta name="description" content="Senior Fullstack Engineer in Ghana. WordPress Developer"/>
     </Head>
     <HomePage/>
    </>
