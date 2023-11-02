@@ -1,4 +1,4 @@
-import '../styles/css/main.scss';
+import '../styles/main.scss';
 import type { AppProps } from 'next/app'
 import { GA } from '../components/GA';
 

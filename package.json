@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "lucide-react": "^0.291.0",
     "next": "12.2.0",
     "nodemailer": "^6.7.7",
     "react": "18.2.0",
